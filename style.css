@@ -1,0 +1,132 @@
+.top-bar {
+  text-align: center;
+    font-family: Verdana , sans-serif;
+    font-size: 24px;
+    color: #d0e204;
+    margin-bottom: 30px;
+}
+.videos {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}  
+.video-container iframe {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.video-btn:hover { 
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+} 
+ body {
+    background-color:lightblue;
+} 
+.video-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* Контейнер: ліворуч вміст, праворуч Рік */
+.layout {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Кнопка MEGA */
+.mega-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #d9272e, #ff5a5f);
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 999px;
+   
+}
+
+.mega-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+/*Кнопка Pinerest*/ 
+.pinterest-btn { 
+    display: inline-block; 
+    magin-top: 40px; 
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #e60023, #ff5a5f); 
+    color: #fff; 
+    font-weight: 600;  
+    font-size: 18px; 
+    text-decoration:none;
+    border-radius: 999px; 
+}  
+.pinterest-btn:hover { 
+    transform: transLateY (-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+/* Картинка Ріка праворуч */
+.PNG {
+    max-height: 450px;
+    width: auto;
+    flex-shrink: 0; 
+    margin-top: 11px;       
+    position: relative;
+    top: 100px;
+} 
+@media (max-width: 768px) {
+
+    /* Контейнер: вміст і Рік одне під одним */
+    .layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Відео одне під одним */
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        max-width: 100%;
+    }
+
+    /* Кнопки в колонку на всю ширину */
+    .links {
+        flex-direction: column;
+    }
+
+    .mega-btn,
+    .pinterest-btn {
+        display: block;
+        text-align: center;
+    }
+
+    /* Заголовок трохи менший */
+    .top-bar {
+        font-size: 20px;
+    }
+
+    /* Картинки справа: під усім вмістом, по центру */
+    .right-side {
+        align-items: center;
+    }
+
+    .rick {
+        height: auto;
+        max-height: 350px;
+        max-width: 100%;
+    }
+
+    .top-img {
+        max-width: 150px;
+    }
+}
